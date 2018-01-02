@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetexperiments", "dotnetexperiments\dotnetexperiments.csproj", "{882B39C9-BCC3-4A8D-B2EA-F331B1AE6130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetexperiments-tests", "dotnetexperiments-tests\dotnetexperiments-tests.csproj", "{0D919AE2-4251-449F-B42B-B7251A303002}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{882B39C9-BCC3-4A8D-B2EA-F331B1AE6130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882B39C9-BCC3-4A8D-B2EA-F331B1AE6130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882B39C9-BCC3-4A8D-B2EA-F331B1AE6130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882B39C9-BCC3-4A8D-B2EA-F331B1AE6130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D919AE2-4251-449F-B42B-B7251A303002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D919AE2-4251-449F-B42B-B7251A303002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D919AE2-4251-449F-B42B-B7251A303002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D919AE2-4251-449F-B42B-B7251A303002}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
