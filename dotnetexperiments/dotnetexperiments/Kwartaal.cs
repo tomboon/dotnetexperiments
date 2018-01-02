@@ -2,27 +2,45 @@
 
 namespace dotnetexperiments
 {
-    public class Kwartaal
+    public class Kwartaal : IComparable<Kwartaal>
     {
+        public int Jaar { get; }
+        public int Nummer { get; }
 
         public Kwartaal(int jaar, int nummer)
         {
-            throw new NotImplementedException();
+            if (nummer < 1 || nummer > 4) throw new ArgumentException("Invalid kwartaalnummer");
+            
+            Jaar = jaar;
+            Nummer = nummer;
         }
 
         public Kwartaal(DateTime datum)
         {
+            Jaar = datum.Year;
+            Nummer = datum.Month % 4;
+        }
+
+        public int CompareTo(Kwartaal other)
+        {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"{Jaar}/{Nummer}";
         }
 
         public Kwartaal Volgende()
         {
-            throw new NotImplementedException();
+            if (Nummer == 4) return new Kwartaal(Jaar + 1, 1);
+            return new Kwartaal(Jaar, Nummer + 1);
         }
 
         public Kwartaal Vorige()
         {
-            throw new NotImplementedException();
+            if (Nummer == 1) return new Kwartaal(Jaar - 1, 4);
+            return new Kwartaal(Jaar, Nummer - 1);
         }
 
         public DateTime StartDatum()
@@ -37,7 +55,8 @@ namespace dotnetexperiments
 
         public override bool Equals(object obj)
         {
-            throw new NotImplementedException();
+            var other = (Kwartaal) obj;
+            return ToString().Equals(other.ToString());
         }
 
         public override int GetHashCode()
