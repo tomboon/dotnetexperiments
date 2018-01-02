@@ -17,6 +17,13 @@ namespace dotnetexperiments_tests
             Assert.AreEqual("2018/1", kwartaal.ToString());
         }
 
+        [Test]
+        public void KwartaalByDate_ToString()
+        {
+            var kwartaal = new Kwartaal(new DateTime());
+            Assert.AreEqual("2018/1", kwartaal.ToString());
+        }
+
         //TODO test all methods of kwartaal class
 
 
