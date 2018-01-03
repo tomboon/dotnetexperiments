@@ -1,6 +1,7 @@
 using System.Web.Http;
 using Unity;
 using Unity.WebApi;
+using WebApplication.Services;
 
 namespace WebApplication
 {
@@ -14,7 +15,8 @@ namespace WebApplication
             // it is NOT necessary to register your controllers
             
             // e.g. container.RegisterType<ITestService, TestService>();
-            
+            container.RegisterType<IKwartaalService, KwartaalService>();
+            //container.RegisterInstance(typeof(IKwartaalService), new KwartaalService());
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

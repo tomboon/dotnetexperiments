@@ -1,11 +1,15 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 
 namespace dotnetexperiments
 {
     public class Kwartaal : IComparable<Kwartaal>
     {
-        public int Jaar { get; }
-        public int Nummer { get; }
+        public int Jaar { get; set; }
+        public int Nummer { get; set; }
+        
+        public Kwartaal() { }
 
         public Kwartaal(int jaar, int nummer)
         {
@@ -23,7 +27,7 @@ namespace dotnetexperiments
 
         public int CompareTo(Kwartaal other)
         {
-            throw new NotImplementedException();
+            return ToString().CompareTo(other.ToString());
         }
 
         public override string ToString()
@@ -66,12 +70,14 @@ namespace dotnetexperiments
 
         public static bool operator ==(Kwartaal k1, Kwartaal k2)
         {
-            throw new NotImplementedException();
+            if (ReferenceEquals(k1, null) || ReferenceEquals(k2, null)) return false;
+            return k1.Equals(k2);
         }
 
         public static bool operator !=(Kwartaal k1, Kwartaal k2)
         {
-            throw new NotImplementedException();
+            if (ReferenceEquals(k1, null) || ReferenceEquals(k2, null)) return true;
+            return !k1.Equals(k2);
         }
 
         public static bool operator <(Kwartaal k1, Kwartaal k2)

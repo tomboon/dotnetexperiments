@@ -13,7 +13,6 @@ namespace WebApplication
         {
             UnityConfig.RegisterComponents();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            
         }
     }
 }
